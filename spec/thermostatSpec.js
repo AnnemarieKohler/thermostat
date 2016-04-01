@@ -73,18 +73,18 @@ describe('thermostat', function() {
       for (var i = 0; i < 3; i++) {
         thermostat.decrease();
       }
-      expect(thermostat.displayColour()).toEqual("low-usage");
+      expect(thermostat.energyUsage()).toEqual("low-usage");
     });
 
     it('has yellow display when temp < 25 degree', function() {
-      expect(thermostat.displayColour()).toEqual('medium-usage');
+      expect(thermostat.energyUsage()).toEqual('medium-usage');
     });
 
     it('has red display when temp > 24 degree', function() {
       for (var i = 0; i < 5; i++) {
         thermostat.increase();
       }
-      expect(thermostat.displayColour()).toEqual('high-usage');
+      expect(thermostat.energyUsage()).toEqual('high-usage');
     });
   });
 });
