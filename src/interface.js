@@ -1,5 +1,7 @@
 $( document ).ready(function() {
   thermostat = new Thermostat();
+
+
   updateTemperature();
 
   function updateTemperature() {
