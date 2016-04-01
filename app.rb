@@ -9,21 +9,12 @@ class Thermostat < Sinatra::Base
   end
 
   post '/temperature' do
-    p params
     session[:temp] = params[:name]
-    p session
-    p session[:temp]
-    redirect '/temp'
   end
 
   get '/temp' do
-    p session
-    if session[:temp]
-      session[:temp]
-      redirect '/index.html'
-    else
-      redirect '/index.html'
-    end
+    # headers "Access-Control-Allow-Origin" => '*'
+    { temp: session[:temp] }.to_json
   end
 
 

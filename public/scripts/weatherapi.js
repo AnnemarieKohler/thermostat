@@ -44,19 +44,13 @@ $( document ).ready(function() {
       })
 
       .done(function( json ) {
-        console.log("Success!");
+        console.log("Success POST!");
       })
 
       .fail(function( xhr, status, errorThrown ) {
-        alert( "Noooooo!" );
         console.log( "Error: " + errorThrown );
         console.log( "Status: " + status );
         console.dir( xhr );
-      })
-
-      .always(function( xhr, status ) {
-        console.log("Sunshine my only sunshine, you make me happy when skies are grey.🌞");
-
       });
 
         $.ajax({
@@ -69,19 +63,13 @@ $( document ).ready(function() {
         })
 
         .done(function( json ) {
-          console.log("Success!");
+          console.log("Success GET!");
         })
 
         .fail(function( xhr, status, errorThrown ) {
-          alert( "Noooooo!" );
           console.log( "Error: " + errorThrown );
           console.log( "Status: " + status );
           console.dir( xhr );
-        })
-
-        .always(function( xhr, status ) {
-          console.log("Sunshine my only sunshine, you make me happy when skies are grey.🌞");
-
         });
 
       });

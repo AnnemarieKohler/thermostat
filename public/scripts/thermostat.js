@@ -20,14 +20,14 @@ Thermostat.prototype.increase = function() {
   if (this.isMaximum()) {
     return;
   }
-  this.temperature += 1;
+  this.temperature ++;
   };
 
 Thermostat.prototype.decrease = function() {
   if (this.isMinimum()) {
     return;
   }
-  this.temperature -= 1;
+  this.temperature --;
 };
 
 Thermostat.prototype.isMinimum = function() {
