@@ -2,7 +2,7 @@
 
 function Thermostat() {
   this.powerSavingMode = true;
-  this.DEFAULT_TEMPERATURE = 20
+  this.DEFAULT_TEMPERATURE = 20;
   this.MAX_POWER_SAVE_MODE = 25;
   this.MAX_POWER_SAVE_MODE_OFF = 32;
   this.MINIMUM_TEMPERATURE = 10;
