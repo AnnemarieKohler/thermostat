@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="main.css">
     <script src="src/thermostat.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="src/weatherapi.js"></script>
     <script src="src/interface.js"></script>
+
   </head>
   <body>
     <div class="wrapper">
@@ -21,9 +23,16 @@
         <button id="PSMon" class="button">PSM on</button>
         <button id="PSMoff" class="button">PSM off</button>
         <button id="reset" class="button">reset</button>
+
+
+      <div class="form" id="form">
+        <input type="text" id="city" placeholder="City">
+        <button type="button" class="button" id="submitWeather">Submit</button>
       </div>
 
-    
+      </div>
+      <div class="weather"></div>
+
     </div>
 
   </body>

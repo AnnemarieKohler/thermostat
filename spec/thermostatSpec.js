@@ -46,7 +46,7 @@ describe('thermostat', function() {
         thermostat.increase();
       }
       expect(thermostat.getTemperature()).toEqual(25);
-    })
+    });
 
     it('has max temp of 32 when off', function() {
       thermostat.switchPowerSavingModeOff();
