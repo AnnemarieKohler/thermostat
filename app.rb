@@ -11,10 +11,13 @@ class Thermostat < Sinatra::Base
   post '/temperature' do
     p params
     session[:temp] = params[:name]
+    p session
     p session[:temp]
+    redirect '/temp'
   end
 
-  get '/temperature' do
+  get '/temp' do
+    p session
     if session[:temp]
       session[:temp]
       redirect '/index.html'

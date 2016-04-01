@@ -31,7 +31,7 @@ $( document ).ready(function() {
       });
     });
 
-    $('#up').click(function() {
+    $('.button').click(function() {
       var temp = thermostat.temperature;
 
       $.ajax({
@@ -59,5 +59,30 @@ $( document ).ready(function() {
 
       });
 
-  });
+        $.ajax({
+          url: "http://localhost:4567/temp",
+          data: {
+            name: temp
+          },
+          type: "GET",
+          dataType: "json",
+        })
+
+        .done(function( json ) {
+          console.log("Success!");
+        })
+
+        .fail(function( xhr, status, errorThrown ) {
+          alert( "Noooooo!" );
+          console.log( "Error: " + errorThrown );
+          console.log( "Status: " + status );
+          console.dir( xhr );
+        })
+
+        .always(function( xhr, status ) {
+          console.log("Sunshine my only sunshine, you make me happy when skies are grey.🌞");
+
+        });
+
+      });
 });
