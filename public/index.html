@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Thermostat</title>
-    <link rel="stylesheet" href="lib/public/styles/main.css">
-    <script src="lib/public/scripts/thermostat.js"></script>
+    <link rel="stylesheet" href="styles/main.css" type='text/css'>
+    <script src="scripts/thermostat.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="lib/public/scripts/weatherapi.js"></script>
-    <script src="lib/public/scripts/interface.js"></script>
+
+    <script src="scripts/interface.js"></script>
+    <script src="scripts/weatherapi.js"></script>
 
   </head>
   <body>
@@ -18,15 +19,15 @@
       <div id="confirmation">PSM is on</div>
 
       <div class="center">
-        <button id="up" class="button">up</button>
-        <button id="down" class="button">down</button>
+        <button id="up" class="button" name="temp">up</button>
+        <button id="down" class="button" name="temp">down</button>
         <button id="PSMon" class="button">PSM on</button>
         <button id="PSMoff" class="button">PSM off</button>
         <button id="reset" class="button">reset</button>
 
 
       <div class="form" id="form">
-        <input type="text" id="city" placeholder="City">
+        <input type="text" id="city" placeholder="City" name="city">
         <button type="button" class="button" id="submitWeather">Submit</button>
       </div>
 
