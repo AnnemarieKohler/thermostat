@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <script src="scripts/interface.js"></script>
+    <script src="scripts/thermostattemperatureapi.js"></script>
     <script src="scripts/weatherapi.js"></script>
 
   </head>
@@ -27,8 +28,11 @@
 
 
       <div class="form" id="form">
-        <input type="text" id="city" placeholder="City" name="city">
-        <button type="button" class="button" id="submitWeather">Submit</button>
+        <form id="submitWeather">
+          <input type="text" id="city" placeholder="City" name="city">
+          <button type="submit" class="button">Submit</button>
+        </form>
+
       </div>
 
       </div>
