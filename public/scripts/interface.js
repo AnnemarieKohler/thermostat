@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
   $.getJSON('/temp', function(data){
     temp = data.temp;
-    thermostat.temperature = temp;
+    thermostat.temperature = temp || thermostat.DEFAULT_TEMPERATURE;
     console.log("Show me temp");
     console.log(temp);
     updateTemperature();
