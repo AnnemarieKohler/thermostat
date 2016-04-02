@@ -4,9 +4,7 @@ $( document ).ready(function() {
 
     $.ajax({
       url: "http://localhost:4567/temperature",
-      data: {
-        name: temp
-      },
+      data: { name: temp },
       type: "POST",
       dataType: "json",
     })
@@ -23,9 +21,7 @@ $( document ).ready(function() {
 
       $.ajax({
         url: "http://localhost:4567/temp",
-        data: {
-          name: temp
-        },
+        data: { name: temp },
         type: "GET",
         dataType: "json",
       })

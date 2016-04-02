@@ -5,14 +5,11 @@ $( document ).ready(function() {
   $.getJSON('/temp', function(data){
     temp = data.temp;
     thermostat.temperature = temp || thermostat.DEFAULT_TEMPERATURE;
-    console.log("Show me temp");
-    console.log(temp);
     updateTemperature();
   });
 
 
   function updateTemperature() {
-    console.log("Show me actual");
     $( '#display' ).html(thermostat.getTemperature());
     $( '#display' ).attr('class', thermostat.energyUsage());
     $( '#display' ).addClass( "display" );
